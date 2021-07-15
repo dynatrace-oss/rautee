@@ -1,0 +1,57 @@
+{
+  "dt_conn": {
+    "url": "http://example.com/api/v2",
+    "token": "my-secret-token"
+  },
+  "jira_conn": {
+    "url": "http://example.com:8080",
+    "username": "my-user",
+    "password": "my-pass"
+  },
+  "jira_defaults": {
+    "assignee": "",
+    "project": "MY_JIRA_PROJECT",
+    "label": "",
+    "priority": "High",
+    "issuetype": "Bug"
+  },
+  "rules": [
+    {
+      "type": "hostname",
+      "value": "foo",
+      "operator": "startswith",
+      "minimumScore": 8.0,
+      "stopAfterMatch": true,
+      "params": {
+          "project": "baz",
+          "label": "security_emergency"
+      }
+    },
+    {
+      "type": "affectedEntity",
+      "value": "proc123",
+      "operator": "equals",
+      "params": {
+          "assignee": "Marvin"
+      }
+    },
+    {
+      "type": "affectedEntityTag",
+      "value": "infrastructure",
+      "operator": "containsIgnoreCase",
+      "params": {
+          "label": "infrastructure"
+      }
+    },
+    {
+      "type": "hostname",
+      "value": "",
+      "operator": "contains",
+      "minimumScore": 8.0,
+      "params": {
+          "label": "security"
+      }
+    }
+  ],
+  "ignore_rest": true
+}

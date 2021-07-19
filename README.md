@@ -32,7 +32,7 @@ this code how you could use the Dynatrace API to build the integration on the pl
 3. Run the tool directly or pass the arguments to our Docker container.
 
 ```shell
-python main.py --dryrun config/config.json
+python rautee.py --dryrun config/config.json
 ```
 
 Note that Python >= 3.5 is required. You will also need to install some dependencies by executing `pip install -r requirements.txt`.

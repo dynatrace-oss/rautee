@@ -4,7 +4,7 @@ from unittest.mock import Mock, patch
 from typing import List, Dict
 
 import connection.jira_connection
-from main import main
+from rautee import main
 from config import Config
 from connection.dynatrace_connection import EntityDetails
 

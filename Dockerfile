@@ -8,5 +8,5 @@ COPY *.py requirements.txt ./
 
 RUN pip install -r requirements.txt
 
-ENTRYPOINT ["python", "main.py"]
+ENTRYPOINT ["python", "rautee.py"]
 CMD ["-h"]
